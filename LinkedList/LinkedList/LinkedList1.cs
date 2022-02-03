@@ -8,7 +8,7 @@ namespace LinkedList
 {
     internal class LinkedList1
     {
-         internal Node head;
+        internal Node head;
         internal void Add(int data)
         {
             Node node = new Node(data);
@@ -111,5 +111,22 @@ namespace LinkedList
             NewNode.next = null;
             return head;
         }
+        internal int Search(int value)
+        {
+            Node node = this.head;
+            int count = 0;
+            while (node != null)
+            {
+
+                if (node.data == value)
+                {
+                    return count;
+                }
+                node = node.next;
+                count++;
+            }
+            return count;
+        }
+
     }
 }
